@@ -1,0 +1,26 @@
+{
+  "name": "api_2",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000A\u0000p\u0000i\u0000_\u0000F\u0000a\u0000c\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriquemachado04/Api_Fac.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henriquemachado04/Api_Fac/issues"
+  },
+  "homepage": "https://github.com/henriquemachado04/Api_Fac#readme",
+  "dependencies": {
+    "express": "^4.18.3",
+    "mysql2": "^3.9.2",
+    "mysql2-promise": "^0.1.4",
+    "nodemon": "^3.1.0"
+  }
+}
