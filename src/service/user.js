@@ -1,7 +1,7 @@
 const mysql = require("mysql2/promise");
 const databaseConfig = require("../config/database.js");
 
-async function getALLUser() {
+async function getAllUser() {
     const connection = await mysql.createConnection(databaseConfig);
 
     const [rows] = await connection.query("SELECT * FROM user");
@@ -32,15 +32,27 @@ async function updateUser(id, name, email, password){
 }
 
 async function deleteUser(id) {
-    const connection = mysql.createConnection(databaseConfig);
+    const connection = await mysql.createConnection(databaseConfig);
 
     await connection.query('DELETE FROM user WHERE id = ?', [id])
 
     await connection.end()
 }
 
+async function getUserById(id){
+    const connection = await mysql.createConnection(databaseConfig);
+
+    const [user] = await connection.query("SELECT * FROM user WHERE id = ?", [id])
+
+    await connection.end();
+
+    return user;
+}
+
 module.exports = {
-    getALLUser,
+    getAllUser,
     createUser,
     updateUser,
+    deleteUser,
+    getUserById,
 }

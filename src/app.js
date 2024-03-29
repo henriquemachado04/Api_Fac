@@ -16,7 +16,6 @@ app.use("/api", userRouter);
 app.use("/api", productRouter);
 
 
-
 app.listen(PORT, () => {
     console.log("Servidor online!")
 });
